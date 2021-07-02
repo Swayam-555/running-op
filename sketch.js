@@ -25,7 +25,7 @@ function setup() {
 
   createCanvas(windowWidth,windowHeight);
   // Moving background
-  path = createSprite(width/2, 200);
+  path = createSprite(width/2, 1000);
   path.addImage(pathImg);
 
   
@@ -58,9 +58,9 @@ function draw() {
    if(gameState === PLAY){
     boy.x = World.mouseX;
      
-    if (path.y > 400) {
-    path.y = height / 2;
-  }
+     if (path.y > 400) {
+     path.y = height / 2;
+   }
 
      gameOver.visible=0;
      
@@ -68,7 +68,7 @@ function draw() {
      
      createCash();
   createDiamonds();
-  createJwellery();
+  createJwellery(); 
   createSword();
      
      if(swordGroup.isTouching(boy)){
@@ -117,9 +117,9 @@ function draw() {
   
 
   drawSprites();
-  textSize(25);
-  fill(255);
-  text("Treasure: " + treasureCollection, height-480, 30);
+  textSize(80);
+  fill(0);
+  text("Treasure: " + treasureCollection, height-160, 70);
 
 }
 
